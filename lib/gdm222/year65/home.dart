@@ -32,30 +32,6 @@ class GDM222Year65Screen extends StatelessWidget {
                   ),
                   dense: true,
                 ),
-                // ListTile(
-                //   title: RichText(
-                //     text: TextSpan(
-                //       children: [
-                //         TextSpan(
-                //           text: '2. กรุณาเข้าไปตอบแบบสำรวจก่อนเรียนได้',
-                //           style: Theme.of(context).textTheme.titleMedium,
-                //         ),
-                //         TextSpan(
-                //           text: 'ที่นี่',
-                //           style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                //             color: Theme.of(context).primaryColor
-                //           ),
-                //           recognizer: TapGestureRecognizer() .. onTap = () {
-                //             launchUrl(
-                //               Uri.parse('https://docs.flutter.io/flutter/services/UrlLauncher-class.html')
-                //             );
-                //           },
-                //         ),
-                //       ]
-                //     )
-                //   ),
-                //   dense: true,
-                // ),
                 ListTile(
                   title: Text(
                     '2. กรุณาเข้าไปตอบ "แบบสำรวจก่อนเรียน" ได้ที่ลิ้งในหัวข้อด้านล่างนี้',

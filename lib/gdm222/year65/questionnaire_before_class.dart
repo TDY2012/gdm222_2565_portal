@@ -14,6 +14,13 @@ class GDM222Year65QuestionnaireBeforeClassScreen extends StatefulWidget {
 class GDM222Year65QuestionnaireBeforeClassState extends State<GDM222Year65QuestionnaireBeforeClassScreen> {
   final _formKey = GlobalKey<FormState>();
   final _answer = GDM222Year65QuestionnaireBeforeClassAnswer();
+  late Future<List<GDM222Year65QuestionnaireBeforeClassResponse>> futureResponses;
+
+  @override
+  void initState() {
+    super.initState();
+    futureResponses = fetchResponses();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,6 +64,35 @@ class GDM222Year65QuestionnaireBeforeClassState extends State<GDM222Year65Questi
           ),
           const Divider(),
           Text(
+            'การตอบกลับ',
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+          FutureBuilder<List<GDM222Year65QuestionnaireBeforeClassResponse>>(
+            future: futureResponses,
+            builder: (context, snapshot) {
+              if(snapshot.hasData) {
+                return ListView(
+                  shrinkWrap: true,
+                  children: snapshot.data!.map(
+                    (e) => ListTile(
+                      title: Text(
+                        'timestamp: ${e.timestamp}, student_id: ${e.student_id}',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      dense: true,
+                    ),
+                  ).toList()
+                );
+              }
+              else if (snapshot.hasError) {
+                return Text('${snapshot.error}');
+              }
+
+              return const LinearProgressIndicator();
+            },
+          ),
+          const Divider(),
+          Text(
             'แบบสำรวจ',
             style: Theme.of(context).textTheme.titleLarge,
           ),
@@ -80,6 +116,11 @@ class GDM222Year65QuestionnaireBeforeClassState extends State<GDM222Year65Questi
                         return 'กรุณากรอกรหัสนักศึกษาให้ถูกต้อง';
                       }
                     },
+                    onChanged: (value) {
+                      setState(() {
+                        _answer.student_id = value;
+                      });
+                    },
                   ),
                   dense: true,
                 ),
@@ -99,6 +140,11 @@ class GDM222Year65QuestionnaireBeforeClassState extends State<GDM222Year65Questi
                       if (value!.isEmpty) {
                         return 'กรุณากรอกอีเมลให้ถูกต้อง';
                       }
+                    },
+                    onChanged: (value) {
+                      setState(() {
+                        _answer.email = value;
+                      });
                     },
                   ),
                   dense: true,
@@ -559,6 +605,7 @@ class GDM222Year65QuestionnaireBeforeClassState extends State<GDM222Year65Questi
             children: [
               ElevatedButton(
                 onPressed: () {
+                  submitResponse(_answer);
                   Navigator.pop(context);
                 },
                 child: const Text('ส่ง'),
