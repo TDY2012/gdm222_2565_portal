@@ -15,7 +15,7 @@ void main() {
         '/': (context) => const HomeScreen(),
         '/gdm222': (context) => const GDM222Screen(),
         '/gdm222/year65': (context) => const GDM222Year65Screen(),
-        '/gdm222/year65/questionnaire_before_class': (context) => const GDM222Year65QuestionnaireBeforeClassScreen(),
+        // '/gdm222/year65/questionnaire_before_class': (context) => const GDM222Year65QuestionnaireBeforeClassScreen(),
       },
       theme: ThemeData(
         fontFamily: 'Sarabun',

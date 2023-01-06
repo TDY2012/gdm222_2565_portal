@@ -34,7 +34,7 @@ class GDM222Year65Screen extends StatelessWidget {
                 ),
                 ListTile(
                   title: Text(
-                    '2. กรุณาเข้าไปตอบ "แบบสำรวจก่อนเรียน" ได้ที่ลิ้งในหัวข้อด้านล่างนี้',
+                    '2. "แบบสำรวจก่อนเรียน" ปิดรับคำตอบแล้ว',
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   dense: true,
@@ -58,13 +58,14 @@ class GDM222Year65Screen extends StatelessWidget {
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                         TextSpan(
-                          text: 'ลิ้ง',
-                          style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                            color: Theme.of(context).primaryColor
-                          ),
-                          recognizer: TapGestureRecognizer() .. onTap = () {
-                            Navigator.pushNamed(context, '/gdm222/year65/questionnaire_before_class');
-                          },
+                          text: 'ปิดรับคำตอบแล้ว',
+                          style: Theme.of(context).textTheme.titleMedium,
+                          // style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                          //   color: Theme.of(context).primaryColor
+                          // ),
+                          // recognizer: TapGestureRecognizer() .. onTap = () {
+                          //   Navigator.pushNamed(context, '/gdm222/year65/questionnaire_before_class');
+                          // },
                         ),
                       ]
                     )

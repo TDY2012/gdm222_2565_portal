@@ -62,7 +62,7 @@ Future<List<GDM222Year65QuestionnaireBeforeClassResponse>> fetchResponses() asyn
   final response = await http.post(
     Uri.parse('https://database.deta.sh/v1/c0ekbbbz/gdm222_2565_questionnaire_before_class_reponse/query'),
     headers: <String, String>{
-      'X-API-Key' : 'c0ekbbbz_DTUMwaPcCBuzFXbWPe9emPPYA2qQjo8c',
+      // 'X-API-Key' : 'c0ekbbbz_DTUMwaPcCBuzFXbWPe9emPPYA2qQjo8c',
       'Content-Type': 'application/json; charset=UTF-8',
     }
   );
@@ -79,7 +79,7 @@ Future<void> submitResponse(GDM222Year65QuestionnaireBeforeClassAnswer answer) a
   final response = await http.put(
     Uri.parse('https://database.deta.sh/v1/c0ekbbbz/gdm222_2565_questionnaire_before_class_reponse/items'),
     headers: <String, String>{
-      'X-API-Key' : 'c0ekbbbz_DTUMwaPcCBuzFXbWPe9emPPYA2qQjo8c',
+      // 'X-API-Key' : 'c0ekbbbz_DTUMwaPcCBuzFXbWPe9emPPYA2qQjo8c',
       'Content-Type': 'application/json; charset=UTF-8',
     },
     body: json.encode( {
