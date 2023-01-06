@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
 import '../../constants.dart';
 import 'models/questionnaire_before_class_model.dart';
 

@@ -72,6 +72,30 @@ class GDM222Year65Screen extends StatelessWidget {
                   ),
                   dense: true,
                 ),
+                ListTile(
+                  title: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '2. คำอธิบายรายวิชา: ',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        TextSpan(
+                          text: 'ลิ้ง',
+                          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            color: Theme.of(context).primaryColor
+                          ),
+                          recognizer: TapGestureRecognizer() .. onTap = () {
+                            launchUrl(
+                              Uri.parse('https://drive.google.com/file/d/1-gY19DkXdAT2iI4ABL5l8GUA1qE1vtGx/view?usp=sharing')
+                            );
+                          },
+                        ),
+                      ]
+                    )
+                  ),
+                  dense: true,
+                ),
               ],
             ),
             const Divider(),
