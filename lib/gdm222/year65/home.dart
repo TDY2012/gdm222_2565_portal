@@ -39,6 +39,13 @@ class GDM222Year65Screen extends StatelessWidget {
                   ),
                   dense: true,
                 ),
+                ListTile(
+                  title: Text(
+                    '3. สัปดาห์ที่ 1 (วันที่ 2023-01-18) กรุณานำเครื่องเขียนมาด้วย ยังไม่จำเป็นต้องนำคอมพิวเตอร์มา และในวันเดียวกันนี้ช่วงบ่าย จะเป็นสัปดาห์ที่ 1 ของรายวิชา MDT 112 เซค 2 นักศึกษาที่สนใจสามารถติดต่อ อ.กิตตินันท์ เพื่อขอเข้าร่วมชั้นเรียนด้วย (sit-in) ได้',
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  dense: true,
+                ),
               ],
             ),
             const Divider(),
