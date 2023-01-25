@@ -103,6 +103,102 @@ class GDM222Year65Screen extends StatelessWidget {
                   ),
                   dense: true,
                 ),
+                ListTile(
+                  title: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '3. รายละเอียดโครงงานรายวิชา: ',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        TextSpan(
+                          text: 'ลิ้ง',
+                          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            color: Theme.of(context).primaryColor
+                          ),
+                          recognizer: TapGestureRecognizer() .. onTap = () {
+                            launchUrl(
+                              Uri.parse('https://docs.google.com/document/d/1xfVSk-Fy7iqGB8A-bLQw2j44xKbjrTCT3QDexYxA2Ug/edit?usp=share_link')
+                            );
+                          },
+                        ),
+                      ]
+                    )
+                  ),
+                  dense: true,
+                ),
+                ListTile(
+                  title: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '4. สไลด์สัปดาห์ที่ 1: ',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        TextSpan(
+                          text: 'ลิ้ง',
+                          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            color: Theme.of(context).primaryColor
+                          ),
+                          recognizer: TapGestureRecognizer() .. onTap = () {
+                            launchUrl(
+                              Uri.parse('https://docs.google.com/presentation/d/1MSOIngGz-shLqziTfq2YwvPPHvJc2d6ZMmhM8ugKphw/edit?usp=share_link')
+                            );
+                          },
+                        ),
+                      ]
+                    )
+                  ),
+                  dense: true,
+                ),
+                ListTile(
+                  title: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '5. สไลด์สัปดาห์ที่ 2: ',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        TextSpan(
+                          text: 'ลิ้ง',
+                          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            color: Theme.of(context).primaryColor
+                          ),
+                          recognizer: TapGestureRecognizer() .. onTap = () {
+                            launchUrl(
+                              Uri.parse('https://docs.google.com/presentation/d/1_n-y24gOtA3KvD2Hrsv_qOo45McYiM__7dDdsci0RTM/edit?usp=share_link')
+                            );
+                          },
+                        ),
+                      ]
+                    )
+                  ),
+                  dense: true,
+                ),
+                ListTile(
+                  title: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '6. ตัวอย่างสัปดาห์ที่ 2 โปรแกรม Pythagorean tree: ',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        TextSpan(
+                          text: 'ลิ้ง',
+                          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            color: Theme.of(context).primaryColor
+                          ),
+                          recognizer: TapGestureRecognizer() .. onTap = () {
+                            launchUrl(
+                              Uri.parse('https://github.com/TDY2012/gdm222_2565_week1_pythagorean_tree')
+                            );
+                          },
+                        ),
+                      ]
+                    )
+                  ),
+                  dense: true,
+                ),
               ],
             ),
             const Divider(),
