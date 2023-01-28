@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/services.dart';
 import '../../constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -156,7 +157,69 @@ class GDM222Year65Screen extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: '5. สไลด์สัปดาห์ที่ 2: ',
+                          text: '5. บันทึกการสอนย้อนหลังสัปดาห์ที่ 1: ',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        TextSpan(
+                          text: 'ลิ้ง ',
+                          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            color: Theme.of(context).primaryColor
+                          ),
+                          recognizer: TapGestureRecognizer() .. onTap = () {
+                            launchUrl(
+                              Uri.parse('https://kmutt-ac-th.zoom.us/rec/share/JnDm5udhfRgzG09urxYxOCtEiKg1yfiIQ7zQGC0_g9JQqism6aTDdNCfen_4fTM9.rT5oheZ6z4XlqjRX?startTime=1674013933000')
+                            );
+                          },
+                        ),
+                      ]
+                    )
+                  ),
+                  dense: true,
+                ),
+                ListTile(
+                  title: Wrap(
+                    spacing: DefaultPadding.GENERAL,
+                    children: [
+                        RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'รหัสผ่าน: Kw3iDD%u',
+                              style: Theme.of(context).textTheme.titleMedium!
+                            ),
+                          ]
+                        )
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          Clipboard.setData(
+                            const ClipboardData(text: 'Kw3iDD%u')
+                          ).then((_){
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text(
+                                    "คัดลอกรหัสผ่าน Kw3iDD%u"
+                                  )
+                                )
+                              );
+                          });
+                        },
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                        icon: const Icon(
+                          Icons.content_copy,
+                        )
+                      ),
+                    ]
+                  ),
+                  dense: true,
+                ),
+                ListTile(
+                  title: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '6. สไลด์สัปดาห์ที่ 2: ',
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                         TextSpan(
@@ -180,7 +243,69 @@ class GDM222Year65Screen extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: '6. ตัวอย่างสัปดาห์ที่ 2 โปรแกรม Pythagorean tree: ',
+                          text: '7. บันทึกการสอนย้อนหลังสัปดาห์ที่ 2: ',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        TextSpan(
+                          text: 'ลิ้ง ',
+                          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            color: Theme.of(context).primaryColor
+                          ),
+                          recognizer: TapGestureRecognizer() .. onTap = () {
+                            launchUrl(
+                              Uri.parse('https://kmutt-ac-th.zoom.us/rec/share/G5HMXCu0KcHjU57KTCmelEX-8BKBX7KjR07sAc4gUmGzrTZk5q_QfkvLG93EIV0f.ylzFBQcSkHSHS00t?startTime=1674615491000')
+                            );
+                          },
+                        ),
+                      ]
+                    )
+                  ),
+                  dense: true,
+                ),
+                ListTile(
+                  title: Wrap(
+                    spacing: DefaultPadding.GENERAL,
+                    children: [
+                        RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'รหัสผ่าน: r&!C9y8s',
+                              style: Theme.of(context).textTheme.titleMedium!
+                            ),
+                          ]
+                        )
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          Clipboard.setData(
+                            const ClipboardData(text: 'r&!C9y8s')
+                          ).then((_){
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text(
+                                    "คัดลอกรหัสผ่าน r&!C9y8s"
+                                  )
+                                )
+                              );
+                          });
+                        },
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                        icon: const Icon(
+                          Icons.content_copy,
+                        )
+                      ),
+                    ]
+                  ),
+                  dense: true,
+                ),
+                ListTile(
+                  title: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '8. ตัวอย่างสัปดาห์ที่ 2 โปรแกรม Pythagorean tree: ',
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                         TextSpan(
