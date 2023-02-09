@@ -50,7 +50,14 @@ class GDM222Year65Screen extends StatelessWidget {
                   ),
                   ListTile(
                     title: Text(
-                      '4. การบ้านครั้งที่ 1 กำหนดปิดรับคำตอบวันที่ 2023-02-07 เวลา 23.59 น.',
+                      '4. การบ้านครั้งที่ 1 กำหนดปิดรับคำตอบวันที่ 2023-02-07 เวลา 23.59 น. (ปิดรับคำตอบแล้ว)',
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: Text(
+                      '5. สัปดาห์ที่ 5 (วันที่ 2023-02-15) มี Quiz ครั้งที่ 1 สามารถทำได้ทั้งผ่านแบบกรอกคำตอบ (กระดาษ) ในห้องเรียนและผ่านช่องทางออนไลน์ สำหรับนักศึกษาคนใดที่ต้องการทำ Quiz ผ่านแบบกรอกคำตอบในห้องเรียน กรุณานำเครื่องเขียนมาด้วย สำหรับช่องทางออนไลน์ จะประกาศลิ้งแบบกรอกคำตอบออนไลน์ให้ทราบในวันดังกล่าวผ่านกลุ่ม Facebook',
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     dense: true,
@@ -451,13 +458,140 @@ class GDM222Year65Screen extends StatelessWidget {
                             style: Theme.of(context).textTheme.titleMedium,
                           ),
                           TextSpan(
+                            text: 'ปิดรับคำตอบแล้ว',
+                            style: Theme.of(context).textTheme.titleMedium
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '13. เฉลยการบ้านครั้งที่ 1: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
                             text: 'ลิ้ง',
                             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                               color: Theme.of(context).primaryColor
                             ),
                             recognizer: TapGestureRecognizer() .. onTap = () {
                               launchUrl(
-                                Uri.parse('https://docs.google.com/forms/d/e/1FAIpQLScGOs8HYdHsM9Ao8pG724MVdBAtSU8CPyRh2O_uDORLmpzWoA/viewform?usp=sf_link')
+                                Uri.parse('https://docs.google.com/document/d/13o8XhaOSdel8ld2ypdks5t8vGV2DxM2JbyuXANHdSkw/edit?usp=sharing')
+                              );
+                            },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '14. สไลด์สัปดาห์ที่ 4: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://docs.google.com/presentation/d/1SdEATRoP6ECMwN2WlROpB4Vnx1b0zqQQOt8ivl0bXGY/edit?usp=sharing')
+                              );
+                            },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '15. บันทึกการสอนย้อนหลังสัปดาห์ที่ 4: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง ',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://kmutt-ac-th.zoom.us/rec/share/74mvUy4q8iEC2_HhSvuCSwJgIPZB2UZhbOcJGL0vVXuid7sy7mpnUbDpVtPJeEYh.o3q_jJ1FQ77ze2Aj?startTime=1675824031000')
+                              );
+                            },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: Wrap(
+                      spacing: DefaultPadding.GENERAL,
+                      children: [
+                          RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: 'รหัสผ่าน: !@?3lCTm',
+                                style: Theme.of(context).textTheme.titleMedium!
+                              ),
+                            ]
+                          )
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Clipboard.setData(
+                              const ClipboardData(text: '!@?3lCTm')
+                            ).then((_){
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text(
+                                      "คัดลอกรหัสผ่าน !@?3lCTm"
+                                    )
+                                  )
+                                );
+                            });
+                          },
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(),
+                          icon: const Icon(
+                            Icons.content_copy,
+                          )
+                        ),
+                      ]
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '16. เฉลยแบบฝึกสัปดาห์ที่ 4: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://github.com/TDY2012/gdm222_2565_week4_exercise')
                               );
                             },
                           ),
