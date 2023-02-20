@@ -600,6 +600,92 @@ class GDM222Year65Screen extends StatelessWidget {
                     ),
                     dense: true,
                   ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '17. สไลด์สัปดาห์ที่ 5: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://docs.google.com/presentation/d/1xVKh5cinynkdeDysKh4n4mesFZb6FEcFwKMvRv_3rqg/edit?usp=sharing')
+                              );
+                            },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '18. บันทึกการสอนย้อนหลังสัปดาห์ที่ 5: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง ',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://kmutt-ac-th.zoom.us/rec/share/Ekbic-biUO-OZl5gCAOlcEehCflzNjLF-W4Bj36Jhj2gBmENJAU6rqgK-I0aMtJU.7poAwVBMJ5Y9nZtE')
+                              );
+                            },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: Wrap(
+                      spacing: DefaultPadding.GENERAL,
+                      children: [
+                          RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: r'รหัสผ่าน: s7wqP*$%',
+                                style: Theme.of(context).textTheme.titleMedium!
+                              ),
+                            ]
+                          )
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Clipboard.setData(
+                              const ClipboardData(text: r's7wqP*$%')
+                            ).then((_){
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text(
+                                      r"คัดลอกรหัสผ่าน s7wqP*$%"
+                                    )
+                                  )
+                                );
+                            });
+                          },
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(),
+                          icon: const Icon(
+                            Icons.content_copy,
+                          )
+                        ),
+                      ]
+                    ),
+                    dense: true,
+                  ),
                 ],
               ),
               const Divider(),
