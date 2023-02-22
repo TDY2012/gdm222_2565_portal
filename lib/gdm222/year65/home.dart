@@ -62,6 +62,13 @@ class GDM222Year65Screen extends StatelessWidget {
                     ),
                     dense: true,
                   ),
+                  ListTile(
+                    title: Text(
+                      '6. การบ้านครั้งที่ 2 กำหนดปิดรับคำตอบวันที่ 2023-02-28 เวลา 23.59 น.',
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    dense: true,
+                  ),
                 ],
               ),
               const Divider(),
@@ -683,6 +690,188 @@ class GDM222Year65Screen extends StatelessWidget {
                           )
                         ),
                       ]
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '19. ตัวอย่างสัปดาห์ที่ 5 โปรแกรม Gachapon: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://github.com/TDY2012/gdm222_2565_week5_gachapon')
+                              );
+                            },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '20. สไลด์สัปดาห์ที่ 6: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://docs.google.com/presentation/d/1d8legM-inAp3IgVFpKusfocxeaIhlOzSWXlL0rloDPM/edit?usp=sharing')
+                              );
+                            },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '21. บันทึกการสอนย้อนหลังสัปดาห์ที่ 6: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'อยู่ระหว่างการดำเนินการ',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              // color: Theme.of(context).primaryColor
+                            ),
+                            // recognizer: TapGestureRecognizer() .. onTap = () {
+                            //   launchUrl(
+                            //     Uri.parse('https://kmutt-ac-th.zoom.us/rec/share/Ekbic-biUO-OZl5gCAOlcEehCflzNjLF-W4Bj36Jhj2gBmENJAU6rqgK-I0aMtJU.7poAwVBMJ5Y9nZtE')
+                            //   );
+                            // },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  // ListTile(
+                  //   title: Wrap(
+                  //     spacing: DefaultPadding.GENERAL,
+                  //     children: [
+                  //         RichText(
+                  //         text: TextSpan(
+                  //           children: [
+                  //             TextSpan(
+                  //               text: r'รหัสผ่าน: s7wqP*$%',
+                  //               style: Theme.of(context).textTheme.titleMedium!
+                  //             ),
+                  //           ]
+                  //         )
+                  //       ),
+                  //       IconButton(
+                  //         onPressed: () {
+                  //           Clipboard.setData(
+                  //             const ClipboardData(text: r's7wqP*$%')
+                  //           ).then((_){
+                  //               ScaffoldMessenger.of(context).showSnackBar(
+                  //                 const SnackBar(
+                  //                   content: Text(
+                  //                     r"คัดลอกรหัสผ่าน s7wqP*$%"
+                  //                   )
+                  //                 )
+                  //               );
+                  //           });
+                  //         },
+                  //         padding: EdgeInsets.zero,
+                  //         constraints: const BoxConstraints(),
+                  //         icon: const Icon(
+                  //           Icons.content_copy,
+                  //         )
+                  //       ),
+                  //     ]
+                  //   ),
+                  //   dense: true,
+                  // ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '22. เฉลยแบบฝึกสัปดาห์ที่ 6: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://github.com/TDY2012/gdm222_2565_week6_exercise')
+                              );
+                            },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '23. การบ้านครั้งที่ 2: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://docs.google.com/document/d/1TVGs3o89a4hNU3POp-UcPCtUnhUe8YM2-628CD0E1H8/edit?usp=sharing')
+                              );
+                            },
+                          ),
+                        ]
+                      )
+                    ),
+                    dense: true,
+                  ),
+                  ListTile(
+                    title: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '24. แบบกรอกคำตอบการบ้านครั้งที่ 2: ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          TextSpan(
+                            text: 'ลิ้ง',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                              color: Theme.of(context).primaryColor
+                            ),
+                            recognizer: TapGestureRecognizer() .. onTap = () {
+                              launchUrl(
+                                Uri.parse('https://docs.google.com/forms/d/e/1FAIpQLSen9h7kxbn1QU2OLq2XFvijrjxBf-WU0vMfZqD-4swp_l8ARA/viewform?usp=sf_link')
+                              );
+                            },
+                          ),
+                        ]
+                      )
                     ),
                     dense: true,
                   ),
